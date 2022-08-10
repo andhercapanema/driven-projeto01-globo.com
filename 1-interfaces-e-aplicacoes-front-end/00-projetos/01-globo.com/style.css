@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    font-family: 'Encode Sans', sans-serif;
+    display: flex; /* Poderia ter utilizado "margin: 0 auto;" para centralizar os itens (header, .top-menu, .news) diretamente */
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 1px solid #000000; */   /* Seria melhor ter utilizado uma div com a border, para dexar independente das outras classes, alterar cor em apenas um lugar no CSS */
+}
+
+a {
+    text-decoration: none;
+}
+
+.horizontal-separating-edge {
+    border-bottom: 1px solid black;
+    /* f5f6f7 */
+    width: 100%;
+}
+
+h1:hover,
+h3:hover,
+h4:hover,
+h6:hover,
+.sections-desktop *:hover {
+    filter: brightness(115%);
+}
+
+.img-row:hover,
+.img-column:hover {
+    filter: brightness(85%);
+    transition: 0.8s;
+}
+
+header img {        /* É desnecessário criar uma classe sendo que só tem essa imagem dentro do header */
+    margin: 22px 0;
+    width: 171px;
+    height: 36px;
+}
+
+.top-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sections-desktop,
+.sections-mobile {
+    width: 1250px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+}
+
+/* É recomendado utilizar o nth-child para não precisar criar uma classe para cada item */
+
+.sections-desktop a:nth-child(1) {
+    color: #C3170C;
+}
+
+.sections-desktop a:nth-child(2) {
+    color: #1E4B9B;
+}
+
+.sections-desktop a:nth-child(3) {
+    color: #006766;
+}
+
+.sections-desktop a:nth-child(4) {
+    color: #07AA47;
+}
+
+.sections-desktop a:nth-child(5) {
+    color: #E3662B;
+}
+
+.sections-desktop a:nth-child(6) {
+    color: #FB0735;
+}
+
+.sections-desktop a:nth-child(7) {
+    color: #FF75BB;
+}
+
+.sections-desktop a:nth-child(8) {
+    color: #EC7D00;
+}
+
+.sections-desktop a:nth-child(9) {
+    color: #323333;
+}
+
+.sections-desktop a:nth-child(10) {
+    color: #A81D83;
+}
+
+.sections-mobile a:nth-child(1) {
+    color: #C3170C;
+}
+
+.sections-mobile a:nth-child(2) {
+    color: #1E4B9B;
+}
+
+.sections-mobile a:nth-child(3) {
+    color: #07AA47;
+}
+
+.sections-mobile a:nth-child(4) {
+    color: #FB0735;
+}
+
+.sections-mobile a:nth-child(5) {
+    color: #EC7D00;
+}
+
+.sections-mobile {
+    display: none;
+}
+
+.news {
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 34px;
+}
+
+.main-editorial {
+    width: 627px;
+}
+
+.news-focus {
+    padding-bottom: 18px;
+}
+
+/* É sempre preferível utilizar seletor hierárquico */
+.news-focus h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #c4160c;
+    line-height: 67px;
+    letter-spacing: -0.01em;
+
+    height: 201px;
+    margin-bottom: 29px;
+}
+
+.news-focus h6 {
+    font-size: 18px;
+    color: #303134;
+
+    margin-bottom: 7px;
+}
+
+.news-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    padding-top: 25px;
+}
+
+.news-row img {
+    width: 193px;
+    height: 110px;
+    border-radius: 12px;
+    border-bottom: 11px;
+    margin-bottom: 11px;
+}
+
+.news-row h4 {
+    color: #c4170c;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 6px;
+    height: 19px;
+}
+
+.news-row h3 {
+    color: #2F3134;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.045em;
+
+    margin-bottom: 4.5px;
+    height: 84px;
+    width: 192px;
+}
+
+.news-row p {
+    color: #2F3134;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.048em;
+
+    height: 42.5px;
+    width: 193px;
+}
+
+.separating-edge {
+    border-left: 1px solid #f5f6f7;
+    height: 845px;
+}
+
+.minor-editorial {
+    width: 240px;
+}
+
+.column-news-wrapper {
+    margin-bottom: 40px;
+    margin-top: 2px;
+}
+
+.img-column {
+    width: 240px;
+    height: 128px;
+    border-radius: 12px;
+    border-bottom: 11px;
+    margin-bottom: 11px;
+}
+
+.ge-summary {
+    color: #16ae54;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 6px;
+    height: 19px;
+}
+
+.column-news-title {
+    color: #2F3134;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.045em;
+
+    margin-bottom: 4.5px;
+    padding-bottom: 9px;
+    width: 240px;
+}
+
+.column-other-news {
+    color: #2F3134;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.048em;
+
+    width: 240px;
+    padding-bottom: 13px;
+}
+
+.gshow-summary {
+    color: #EC8006;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 6px;
+    height: 19px;
+}
+
+.gshow-column-other-news {
+    color: #2F3134;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.048em;
+
+    width: 240px;
+    padding-top: 1.5px;
+    padding-bottom: 7.5px;
+}
+
+/* RESPONSIVO */
+
+
+/* 1º - É recomendado trocar as unidades absolutas por unidades relativas */
+/* 2º - Ajustar o layout em si do site */
+/* 3º - Realizar os ajustes finos */
+@media (max-width: 600px) {
+    .top-menu {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    header img {
+        margin: 10px 0 13px;
+        width: 208px;
+        height: 57px;
+    }
+
+    .sections-desktop {
+        display: none;
+    }
+
+    .sections-mobile {
+        display: flex;
+        justify-content: space-around;
+        height: 58px;
+        width: 90%;
+    }
+
+    .news {
+        flex-direction: column;
+        justify-content: center;
+        width: 92%;
+        margin-top: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .news-focus {
+        padding-bottom: 0px;
+        border-bottom: 1px solid #E6E6E6;
+        /* #E6E6E6; */
+        margin-bottom: 22px;
+    }
+
+    .main-editorial {
+        width: 100%;
+    }
+
+    .main-editorial * {
+        color: #CD150B;
+    }
+
+    .news-focus h1 {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.028em;
+
+        height: auto;
+        margin-bottom: 7px;
+    }
+
+    .news-focus h6 {
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0.068em;
+
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+        color: #CD150B;
+    }
+
+    .news-row {
+        padding-top: 0px;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .row-news-wrapper {
+        width: 100%;
+        padding-bottom: 9px;
+        border-bottom: 1px solid #E6E6E6;
+        /* #E6E6E6; */
+        margin-bottom: 22px;
+    }
+
+    .full-news {
+        display: flex;
+        margin-bottom: 18px;
+    }
+
+    .img-row {
+        width: 7.5rem;
+        height: 4.1875rem;
+        border-radius: 4px;
+        border-bottom: 11px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .news-text {
+        width: 61.16%;
+    }
+
+    .summary,
+    .ge-summary,
+    .gshow-summary {
+        display: none;
+    }
+
+    .news-title {
+        font-size: 18px;
+
+        height: auto;
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .other-news {
+        font-size: 16px;
+
+        height: auto;
+        width: auto;
+    }
+
+    .full-news-without-img {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .separating-edge {
+        display: none;
+    }
+
+    .minor-editorial {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ge-news-column,
+    .gshow-news-column {
+        width: 100%;
+    }
+
+    .ge-news-column * {
+        color: #06AA48;
+    }
+
+    .gshow-news-column * {
+        color: #FF8203;
+    }
+
+    .column-news-wrapper {
+        width: 100%;
+        padding-bottom: 9px;
+        border-bottom: 1px solid #E6E6E6;
+        /* #E6E6E6; */
+        margin-bottom: 22px;
+    }
+
+    .img-column {
+        width: 7.5rem;
+        height: 4.1875rem;
+        border-radius: 4px;
+        border-bottom: 11px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .column-news-title {
+        font-size: 18px;
+
+        height: auto;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .column-other-news {
+        font-size: 16px;
+
+        height: auto;
+        width: auto;
+    }
+
+    .gshow-column-other-news {
+        font-size: 16px;
+    }
+
+    p {
+        justify-content: space-between;
+    }
+}
